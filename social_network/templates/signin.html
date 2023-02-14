@@ -49,6 +49,17 @@
             <div class="lg:p-12 max-w-md max-w-xl lg:my-0 my-12 mx-auto p-6 space-y-">
                 <h1 class="lg:text-3xl text-xl font-semibold  mb-6"> Log in</h1>
 
+                <div>
+                    <style>
+                            h5{
+                                color: red
+                            }
+                    </style>
+                    {% for message in messages %}
+                    <h5>{{message}}</h5>
+                    {% endfor %}
+                </div>
+
                 <form action="" method="POST">
                     {% csrf_token %}
                     <input type="text" name="username" placeholder="Username" class="bg-gray-200 mb-2 shadow-none dark:bg-gray-800" style="border: 1px solid #d3d5d8 !important;">
