@@ -18,6 +18,7 @@
 </head>
 
 <body>
+{% csrf_token %}
 
             <header>
                 <div class="header_inner">
@@ -50,14 +51,14 @@
                         <a href="#"
                             class="bg-pink-500 flex font-bold hidden hover:bg-pink-600 hover:text-white inline-block items-center lg:block max-h-10 mr-4 px-4 py-2 rounded shado text-white">
                             <ion-icon name="add-circle" class="-mb-1
-                             mr-1 opacity-90 text-xl uilus-circle"></ion-icon> Upload Pics / Videos
+                             mr-1 opacity-90 text-xl uilus-circle"></ion-icon> Upload Pics
                         </a>
                          <!-- upload dropdown box -->
                         <div uk-dropdown="pos: top-right;mode:click ; animation: uk-animation-slide-bottom-small" class="header_dropdown">
 
                             <!-- notivication header -->
                             <div class="px-4 py-3 -mx-5 -mt-4 mb-5 border-b">
-                                <h4>Upload Pics or Videos</h4>
+                                <h4>Upload Pics</h4>
                             </div>
 
                             <!-- notification contents -->
@@ -167,8 +168,9 @@
                         <!-- profile -->
 
                         <a href="#">
-                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="header-avatar" alt="">
+                            <img src="{{user_profile.profileimg.url}}" class="header-avatar" alt="">
                         </a>
+
                         <div uk-drop="mode: click;offset:9" class="header_dropdown profile_dropdown border-t">
                             <ul>
                                 <li><a href="/settings"> Account setting </a> </li>
@@ -199,7 +201,7 @@
                                 <div class="flex flex-1 items-center space-x-4">
                                     <a href="#">
                                         <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">
-                                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
+                                            <img src="{{user_profile.profileimg.url}} class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                         </div>
                                     </a>
                                     <span class="block capitalize font-semibold "> tomi_ml </span>
