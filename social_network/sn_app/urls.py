@@ -13,6 +13,7 @@ urlpatterns=[
     path('signup', views.signup, name='signup'),
     path('signin', views.signin, name='signin'),
     path('delete-post/<uuid:post_id>/', views.delete_post, name='delete_post'),
+    #path('update-post/<uuid:post_id>/', views.update_post, name='update_post'),
     path('logout', views.logout, name='logout')
 
 ]

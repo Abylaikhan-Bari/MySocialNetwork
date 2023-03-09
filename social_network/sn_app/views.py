@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseBadRequest
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Post, LikePost, FollowersCount
 from itertools import chain
@@ -9,6 +9,10 @@ import random
 
 
 # Create your views here.
+
+
+
+
 
 
 @login_required(login_url='signin')
@@ -73,6 +77,37 @@ def delete_post(request, post_id):
     if post:
         post.delete()
     return redirect('index')
+
+
+# @login_required(login_url='signin')
+# def update_post(request, post_id):
+#     # Get the post object
+#     post = Post.objects.filter(id=post_id, user=request.user).first()
+#     if not post:
+#         # Post does not exist for the user, return an error response
+#         return HttpResponseBadRequest('Post does not exist for the user.')
+#
+#     # Check if the user is following their own profile
+#     user = request.user
+#     follower = request.user
+#     is_following_own_profile = FollowersCount.objects.filter(follower=follower, user=user).exists()
+#
+#     if is_following_own_profile:
+#         # Unfollow the user's own profile
+#         delete_follower = FollowersCount.objects.get(follower=follower, user=user)
+#         delete_follower.delete()
+#     else:
+#         # Follow the user's own profile
+#         new_follower = FollowersCount.objects.create(follower=follower, user=user)
+#         new_follower.save()
+#
+#     # Update the post object
+#     post.title = request.POST.get('title')
+#     post.content = request.POST.get('content')
+#     post.save()
+#
+#     # Redirect to the user's profile page
+#     return redirect('profile', pk=user.pk)
 
 
 @login_required(login_url='signin')
