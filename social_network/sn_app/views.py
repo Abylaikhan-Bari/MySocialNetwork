@@ -10,6 +10,7 @@ import random
 
 # Create your views here.
 
+
 @login_required(login_url='signin')
 def index(request):
     user_object = User.objects.get(username=request.user.username)
@@ -22,6 +23,9 @@ def index(request):
 
     for users in user_following:
         user_following_list.append(users.user)
+
+    # add current user to the list of users being followed
+    user_following_list.append(request.user.username)
 
     for usernames in user_following_list:
         feed_lists = Post.objects.filter(user=usernames)
@@ -54,8 +58,8 @@ def index(request):
 
     suggestions_username_profile_list = list(chain(*username_profile_list))
 
-    return render(request, 'index.html', {'user_profile': user_profile, 'posts': feed_list,
-                                          'suggestions_username_profile_list': suggestions_username_profile_list[:4]})
+    return render(request, 'index.html', {'user_profile': user_profile, 'posts': feed_list, 'suggestions_username_profile_list': suggestions_username_profile_list[:4]})
+
 
 
 @login_required(login_url='signin')
@@ -172,27 +176,19 @@ def settings(request):
     user_profile = Profile.objects.get(user=request.user)
 
     if request.method == 'POST':
-
         if request.FILES.get('image') == None:
             image = user_profile.profileimg
-            bio = request.POST['bio']
-            location = request.POST['location']
+        else:
+            image = request.FILES['image']
 
-            user_profile.profileimg = image
-            user_profile.bio = bio
-            user_profile.location = location
-            user_profile.save()
-        if request.FILES.get('image') != None:
-            image = request.FILES.get('image')
-            bio = request.POST['bio']
-            location = request.POST['location']
+        bio = request.POST['bio']
+        location = request.POST['location']
 
-            user_profile.profileimg = image
-            user_profile.bio = bio
-            user_profile.location = location
-            user_profile.save()
+        user_profile.profileimg = image
+        user_profile.bio = bio
+        user_profile.location = location
+        user_profile.save()
 
-        return redirect('settings')
     return render(request, 'setting.html', {'user_profile': user_profile})
 
 

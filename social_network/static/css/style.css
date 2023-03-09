@@ -207,7 +207,7 @@ section {
 }
 
 .pattern:before {
-    background: pink url("../images/dot-pattern.png") repeat scroll 0 0;
+    background: blue url("../images/dot-pattern.png") repeat scroll 0 0;
     opacity: 0.45;
 }
 
@@ -216,7 +216,7 @@ section {
 }
 
 .bluesh:before {
-    background: pink;
+    background: blue;
 }
 
 .exthigh-opacity:before {
@@ -425,7 +425,7 @@ iframe {
     width: 40px;
     height: 40px;
     border-radius: 4px;
-    background: pink;
+    background: blue;
     color: #000;
     transition: all 0.4s;
     transform: rotate(-15deg);
@@ -436,7 +436,7 @@ iframe {
     transform: rotate(0);
     background: #000;
   transition: 1s;
-  color: pink;
+  color: blue;
 }
 
 
@@ -563,7 +563,7 @@ header.sticky {
 
 .log-reg-area .checkbox label,
 .form-radio label {
-    color: #999;
+    color: #1f36ab;
     font-size: 13px;
 }
 
@@ -654,7 +654,7 @@ header.sticky {
 }
 
 .top-area > ul > li > a {
-    color: #999;
+    color: #1f36ab;
 }
 
 .top-area .user-img {
@@ -703,7 +703,7 @@ header.sticky {
 .form-search input {
     border-style: none none solid;
     border-width: medium medium 1px;
-    color: #999999;
+    color: #1f36ab999;
     font-size: 15px;
     padding: 9px 18px;
     width: 100%;
@@ -712,7 +712,7 @@ header.sticky {
 .form-search button {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: medium none;
-    color: #999;
+    color: #1f36ab;
     position: absolute;
     right: 5px;
     top: 9px;
@@ -748,12 +748,12 @@ header.sticky {
 }
 
 .user-avatar {
-    border: 2px solid pink;
+    border: 2px solid blue;
     border-radius: 10px;
     border-right-color: #4680ff;
     border-top-color: #4680ff;
-    border-left-color: pink;
-    box-shadow: 0 1px 0 pink;
+    border-left-color: blue;
+    box-shadow: 0 1px 0 blue;
     float: right;
     margin-top: -168px;
     overflow: hidden;
@@ -818,7 +818,7 @@ header.sticky {
 }
 
 .timeline-info .admin-name > h5 {
-    color: pink;
+    color: blue;
     display: inline-block;
     font-size: 24px;
     font-weight: 500;
@@ -873,7 +873,7 @@ header.sticky {
 }
 
 .edit-phto:hover {
-    background: pink;
+    background: blue;
     border: 1px solid;
     color: #000;
 }
@@ -1015,7 +1015,7 @@ header.sticky {
 }
 
 .mesg-meta > i {
-    color: #999;
+    color: #1f36ab;
     font-size: 12px;
     font-style: normal;
 }
@@ -1091,7 +1091,7 @@ header.sticky {
 }
 
 .add-btn > a:hover {
-    border: 1px solid pink;
+    border: 1px solid blue;
     background-color: transparent !important;
     color: #000 !important;
 
@@ -1103,8 +1103,8 @@ header.sticky {
     display: inline-block;
     font-size: 14px;
     padding: 4px 20px;
-    border: 1px solid pink;
-    background-color: pink !important;
+    border: 1px solid blue;
+    background-color: blue !important;
 
 }
 
@@ -1170,7 +1170,7 @@ header.sticky {
     left: 20px;
     position: absolute;
     width: 20%;
-    background: pink !important;
+    background: blue !important;
 }
 
 .sidebar .widget li {
@@ -1224,7 +1224,7 @@ header.sticky {
 }
 
 .activity-meta > i {
-    color: #999;
+    color: #1f36ab;
     float: left;
     font-size: 12px;
     width: 100%;
@@ -1262,7 +1262,7 @@ header.sticky {
 
 .central-meta {
     background: #fff none repeat scroll 0 0;
-    /*border: 1px solid pink;*/
+    /*border: 1px solid blue;*/
     border-radius: 10px;
     box-shadow: 0 0 12px 2px rgba(0, 0, 0, .5);
     display: inline-block;
@@ -1371,7 +1371,7 @@ form button {
 }
 
 .friend-name > span {
-    color: #999;
+    color: #1f36ab;
     float: left;
     font-size: 12px;
     text-transform: capitalize;
@@ -1867,7 +1867,7 @@ for some reason nth-child(1) is always busy and elements starting from 2 */
 }
 
 .coment-head > span {
-    color: #999;
+    color: #1f36ab;
     font-size: 12px;
     padding-left: 10px;
     display: inline-block;
@@ -2032,7 +2032,7 @@ span.status.f-off {
 }
 
 .friendz-meta > i {
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     font-size: 13px;
     width: 100%;
@@ -2353,7 +2353,7 @@ footer .logo {
 }
 
 .user-setting > a i {
-    color: #999;
+    color: #1f36ab;
     font-size: 12px;
     margin-right: 8px;
 }
@@ -2653,7 +2653,7 @@ li.google {
 }
 
 .twiter-feed > li > span {
-    color: #999;
+    color: #1f36ab;
     font-size: 12px;
     vertical-align: top;
     width: 82%;
@@ -2877,7 +2877,7 @@ li.google {
 }
 
 .g-map::before {
-    background: pink none repeat scroll 0 0;
+    background: blue none repeat scroll 0 0;
     content: "";
     height: 100%;
     left: 0;
@@ -2895,7 +2895,7 @@ li.google {
 }
 
 .map-meta {
-    background: pink none repeat scroll 0 0;
+    background: blue none repeat scroll 0 0;
     color: #000;
     left: 10%;
     padding: 20px;
@@ -3680,7 +3680,7 @@ a.add-butn.more-action {
 
 .basics > li,
 .education > li {
-    color: #999;
+    color: #1f36ab;
     font-size: 14px;
     margin-bottom: 20px;
     text-transform: capitalize;
@@ -3902,7 +3902,7 @@ a.forgot-pwd {
 }
 
 .invition .friend-meta a.invite {
-    color: #999;
+    color: #1f36ab;
     float: left;
     font-size: 14px;
     letter-spacing: 0.4px;
@@ -3937,7 +3937,7 @@ a.forgot-pwd {
 }
 
 .advertisment-box > h4 {
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     font-size: 14px;
     text-transform: capitalize;
@@ -3998,7 +3998,7 @@ a.forgot-pwd {
 }
 
 .notifi-meta > span {
-    color: #999;
+    color: #1f36ab;
     font-size: 12px;
 }
 
@@ -4031,7 +4031,7 @@ a.forgot-pwd {
 }
 
 .more-options > i {
-    color: #999 !important;
+    color: #1f36ab !important;
     font-size: 16px;
 }
 
@@ -4378,7 +4378,7 @@ a.forgot-pwd {
 }
 
 .page-infos > span {
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     font-size: 12px;
     text-transform: capitalize;
@@ -4525,11 +4525,11 @@ canvas {
 
 .central-meta button.btn-view {
     background: #000;
-    color: pink !important;
+    color: blue !important;
 }
 
 .btn-view.btn-load-more::before {
-    color: pink;
+    color: blue;
     content: "\f01e";
     font-family: fontawesome;
     left: 50%;
@@ -4877,7 +4877,7 @@ canvas {
 }
 
 .notification-date {
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     font-size: 11px;
     width: 100%;
@@ -5656,7 +5656,7 @@ canvas {
 }
 
 .post-title .p-date {
-    color: #999;
+    color: #1f36ab;
     font-size: 10px;
     text-transform: uppercase;
 }
@@ -5957,7 +5957,7 @@ form.filter-form input {
 }
 
 .l-post-ranking {
-    color: #999;
+    color: #1f36ab;
     font-size: 10px;
     text-transform: uppercase;
 }
@@ -6279,7 +6279,7 @@ figure.aligncenter,
 }
 
 .tags > a {
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     font-size: 15px;
     margin-right: 2px;
@@ -6695,7 +6695,7 @@ a.reply {
 }
 
 .menu-container {
-    background-color: pink;
+    background-color: blue;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
@@ -7517,7 +7517,7 @@ a.main-btn {
 }
 
 .price-table > span i {
-    color: #999;
+    color: #1f36ab;
     font-size: 20px;
 }
 
@@ -7905,7 +7905,7 @@ a.main-btn {
 }
 
 .assistant-name > i {
-    color: #999;
+    color: #1f36ab;
     font-size: 13px;
     font-style: normal;
 }
@@ -7940,7 +7940,7 @@ a.main-btn {
 }
 
 .post-dated > span {
-    color: #999;
+    color: #1f36ab;
     font-size: 13px;
     padding-left: 10px;
 }
@@ -8052,7 +8052,7 @@ h3.resutl-found {
 }
 
 h3.resutl-found > span {
-    color: #999999;
+    color: #1f36ab999;
 }
 
 
@@ -8100,12 +8100,12 @@ figure.sign-author {
 }
 
 .fonder > h4 i {
-    color: #999;
+    color: #1f36ab;
     font-size: 13px;
 }
 
 .fonder > i {
-    color: #999;
+    color: #1f36ab;
     font-size: 13px;
 }
 
@@ -8217,7 +8217,7 @@ figure.sign-author {
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
     border-radius: 100%;
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     font-size: 15px;
     line-height: 40px;
@@ -8331,7 +8331,7 @@ figure.sign-author {
 }
 
 .prices > del {
-    color: #999;
+    color: #1f36ab;
     font-size: 12px;
     font-weight: bold;
     letter-spacing: 0.7px;
@@ -8814,7 +8814,7 @@ a.btn2:hover {
 }
 
 .woocommerce-noreviews {
-    color: #999;
+    color: #1f36ab;
     text-transform: capitalize;
 }
 
@@ -9331,7 +9331,7 @@ button.submit-checkout {
 }
 
 .cart-prices > del {
-    color: #999999;
+    color: #1f36ab999;
     display: inline-block;
     font-size: 12px;
     padding-top: 0;
@@ -9700,7 +9700,7 @@ aside.sidebar.full-style {
 }
 
 .singin > form > label {
-    color: #999;
+    color: #1f36ab;
     font-size: 12px;
     margin: 0;
 }
@@ -9754,7 +9754,7 @@ aside.sidebar.full-style {
 
 .widget ul.recent-topics > li > span,
 .widget ul.feature-topics > li > span {
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     font-size: 11px;
     width: 100%;
@@ -9804,7 +9804,7 @@ aside.sidebar.full-style {
 }
 
 .topic-data > em {
-    color: #999;
+    color: #1f36ab;
     float: left;
     font-size: 11px;
     width: 100%;
@@ -9953,7 +9953,7 @@ aside.sidebar.full-style {
     width: 100%;
 }
 .salary-area > span {
-    color: #999;
+    color: #1f36ab;
     display: inline-block;
     margin-bottom: 20px;
     width: 100%;
