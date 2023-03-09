@@ -12,6 +12,7 @@ urlpatterns=[
     path('like-post', views.like_post, name='like-post'),
     path('signup', views.signup, name='signup'),
     path('signin', views.signin, name='signin'),
+    path('delete-post/<uuid:post_id>/', views.delete_post, name='delete_post'),
     path('logout', views.logout, name='logout')
 
 ]

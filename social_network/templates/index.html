@@ -205,11 +205,15 @@
                             <div class="flex justify-between items-center px-4 py-3">
                                 <div class="flex flex-1 items-center space-x-4">
                                     <!--Post avatar-->
-                                    <!-- <a href="#">
-                                        <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">
-                                            <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
-                                        </div>
-                                    </a> -->
+                                     <a href="#">
+                                        <!--<div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">
+                                            {% if profile.user == user %}
+                                            <img src="{{user_profile.profileimg.url}}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
+                                            {% else %}
+                                            <img src="" >
+                                            {% endif %}
+                                        </div>-->
+                                    </a>
                                     <span class="block font-semibold "><a href="/profile/{{post.user}}">@{{post.user}}</a></span>
                                 </div>
                               <div>
@@ -241,10 +245,11 @@
                                         <hr class="-mx-2 my-2 ">
                                       </li>
                                       <li>
-                                          <a href="#" class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md ">
-                                           <i class="uil-trash-alt mr-1"></i>  Delete Post
-                                          </a>
-                                      </li>
+                                        <a href="{% url 'delete_post' post_id=post.id %}" class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md">
+                                            <i class="uil-trash-alt mr-1"></i> Delete Post
+                                        </a>
+                                    </li>
+
                                     </ul>
 
                                 </div>

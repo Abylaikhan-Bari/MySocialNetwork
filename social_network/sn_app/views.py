@@ -58,8 +58,21 @@ def index(request):
 
     suggestions_username_profile_list = list(chain(*username_profile_list))
 
+    # Check for post deletion
+    if request.method == 'POST' and 'delete_post' in request.POST:
+        post_id = request.POST['delete_post']
+        Post.objects.filter(id=post_id, user=request.user.username).delete()
+        return redirect('index')
+
     return render(request, 'index.html', {'user_profile': user_profile, 'posts': feed_list, 'suggestions_username_profile_list': suggestions_username_profile_list[:4]})
 
+
+@login_required(login_url='signin')
+def delete_post(request, post_id):
+    post = Post.objects.filter(id=post_id, user=request.user.username).first()
+    if post:
+        post.delete()
+    return redirect('index')
 
 
 @login_required(login_url='signin')
