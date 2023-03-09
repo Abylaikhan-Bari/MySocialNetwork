@@ -31,12 +31,13 @@
 					{% csrf_token %}
 					<div class="add-btn">
 					<span style="color: white; font-size: 27px; margin-right: 520px;"><b><u><a href="/">Home</a></u></b></span>
-					{% if user_posts_length == 0 %}
+
+					{% if user_post_length == 0 %}
 					<span style="color: white; font-size: 27px;"><b>No Post</b></span>
-					{% elif  user_posts_length == 1 %}
-					<span style="color: white; font-size: 27px;"><b>{{user_posts_length}} Post</b></span>
+					{% elif user_post_length == 1 %}
+					<span style="color: white; font-size: 27px;"><b>{{user_post_length}} Post</b></span>
 					{% else %}
-					<span style="color: white; font-size: 27px;"><b>{{user_posts_length}} Posts</b></span>
+					<span style="color: white; font-size: 27px;"><b>{{user_post_length}} Posts</b></span>
 					{% endif %}
 
 					{% if user_followers == 0 or user_followers == 1 %}
@@ -44,6 +45,7 @@
 					{% else %}
 					<span style="color: white; font-size: 27px;"><b>{{user_followers}} followers</b></span>
 					{% endif %}
+
 
 					<span style="color: white; font-size: 27px;"><b>{{user_following}} following</b></span>
 
@@ -55,6 +57,7 @@
 					{% else %}
 					<a data-ripple=""><button type="submit" style="background-color: #ffc0cb; border: #ffc0cb;">{{button_text}}</button></a>
 					{% endif %}
+
 					</div>
 				</form>
 
@@ -71,12 +74,12 @@
 							<div class="user-avatar">
 								<figure>
 									<img src="{{user_profile.profileimg.url}}" style="height: 250px; width: 100%;" alt="">
-									<!--<form class="edit-phto">
+									<!-- <form class="edit-phto">
 										<i class="fa fa-camera-retro"></i>
 										<label class="fileContainer">
 											<a href="#account-settings">Upload Profile Photo</a>
 										</label>
-									</form>-->
+									</form> -->
 								</figure>
 							</div>
 						</div>
@@ -112,7 +115,7 @@
 		</section><!-- top area -->
 		<section>
 			<div class="bio">
-				{{user_profile.bio}}
+					{{user_profile.bio}}
 			</div>
 		</section>
 
@@ -149,15 +152,7 @@
 												<img src="{{post.image.url}}" style="height: 250px; width: 300px;" alt=""></a>
 										</li>
 										{% endfor %}
-										<!--<li>
-											<a class="strip" href="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-												<img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" style="height: 250px; width: 300px;" alt=""></a>
-										</li>
 
-										<li>
-											<a class="strip" href="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
-												<img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" style="height: 250px; width: 300px;" alt=""></a>
-										</li>-->
 
 
 									</ul>
