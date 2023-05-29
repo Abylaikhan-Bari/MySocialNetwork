@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Messages</h1>
+  {% if messages %}
+    <ul>
+    {% for message in messages %}
+      <li>{{ message.sender }} sent a message to {{ message.receiver }}: "{{ message.content }}"</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>No messages yet.</p>
+  {% endif %}
+
+  <a href="{% url 'send_message' %}">Send a message</a>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Send a message</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div>
+      <label for="sender">Sender:</label>
+      <input type="text" name="sender" id="sender">
+    </div>
+    <div>
+      <label for="receiver">Receiver:</label>
+      <input type="text" name="receiver" id="receiver">
+    </div>
+    <div>
+      <label for="content">Message:</label>
+      <textarea name="content" id="content"></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+{% endblock %}
